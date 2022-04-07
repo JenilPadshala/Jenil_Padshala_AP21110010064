@@ -83,17 +83,16 @@ void AddLast()
     p->next = NULL;
     q = head;
     while (q->next != NULL)
-        ;
     {
         q = q->next;
-        printf("1");
+        
     }
     q->next = p;
+
     q = head;
     while (q != NULL)
     {
         printf("%d --> ", q->data);
         q = q->next;
     }
-    printf("\n");
 }
