@@ -38,7 +38,7 @@ int main()
     {
         head = head->prev;
     }
-    while (head != NULL)
+    while (head != NULL)            //DO NOT USE WHILE LOOP... head SHOULD NOT POINT TO NULL AT THE END.
     {
         printf("Element is %d\n", head->data);
         head = head->next;

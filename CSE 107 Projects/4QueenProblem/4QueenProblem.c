@@ -1,55 +1,32 @@
 #include <stdio.h>
 #include <stdbool.h>
-//#define BOARDSIZE 8
-#define DIAGONAL (2*BOARDSIZE-1)
-#define DOWNOFFSET 7
-void WriteBoard(void);
-void AddQueen(void);
-
-int queencol[4];
-bool colfree[4];
-bool upfree[4];
-bool downfree[4];
-
-int queencount = -1,
-    numsol = 0;
-
-int main()
+void PrintQueen(bool PrintMatrix);  //Print correct Arrangement
+void RemoveQueen(); //Remove queen from QueenMatrix
+void InsertQueen(); //Add Queen in QueenMatrix
+void CheckDownDiagonal();   //Check if any other Queen down diagonal
+void CheckUpDiagonal();     //Check if any other Queen in up diagonal
+void CheckColumn();     //Check if any other Queen present in same column
+int main ();
 {
-    int i;
-    for (i=0; i< 4;i++)
-    {
-        colfree[i] = true;
-    }
-    for (i=0; i< 4; i++)
-    {
-        upfree[i] = true;
-        downfree[i] = true;
-    }
-    AddQueen();
+    int GuardMatrix[4][4];  //Keep record of places guarded
+    int i,j;
+    bool QueenMatrix[4][4]; //Keep record of position of Queens
+    int a,b;
 
-}
+    bool QueenCol[4];   //Keep track of columns occupied by Queen
 
-void AddQueen(void)
-{
-    int col;
-    for (col=0; col<8; col++)
+    for (i=0; i<4; i++)     //Setting all values in GuardMatrix to 0.
     {
-        if(colfree[col] && upfree[queencount + col] && downfree[queencount - col + DOWNOFFSET])
+        for (j=0; j<4;j++)
         {
-            queencol[queencount] = col;
-            colfree[col] = false;
-            upfree[queencount + col] = false;
-            downfree[queencount - col + DOWNOFFSET] = false;
-
-            if(queencount == 4-1)
-                WriteBoard();
-            else
-                AddQueen();
-            colfree[col] = true;
-            upfree[queencount + col] = true;
-            downfree[queencount - col + DOWNOFFSET] = true;
+            GuardMatrix[i][j] = 0;
         }
-        queencount--;
+    }
+    for (a=0; a<4; a++)     //Setting all values in QueenMatrix to 0.
+    {
+        for (b=0; b<4;b++)
+        {
+            QueenMatrix[a][b] = true;
+        }
     }
 }
