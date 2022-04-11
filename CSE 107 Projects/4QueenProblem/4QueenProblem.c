@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdbool.h>
-#define BOARDSIZE 8
+//#define BOARDSIZE 8
 #define DIAGONAL (2*BOARDSIZE-1)
 #define DOWNOFFSET 7
 void WriteBoard(void);
 void AddQueen(void);
 
-int queencol[BOARDSIZE];
-bool colfree[BOARDSIZE];
-bool upfree[DIAGONAL];
-bool downfree [DIAGONAL];
+int queencol[4];
+bool colfree[4];
+bool upfree[4];
+bool downfree[4];
 
 int queencount = -1,
     numsol = 0;
@@ -17,11 +17,11 @@ int queencount = -1,
 int main()
 {
     int i;
-    for (i=0; i< BOARDSIZE;i++)
+    for (i=0; i< 4;i++)
     {
         colfree[i] = true;
     }
-    for (i=0; i< DIAGONAL; i++)
+    for (i=0; i< 4; i++)
     {
         upfree[i] = true;
         downfree[i] = true;
@@ -33,7 +33,7 @@ int main()
 void AddQueen(void)
 {
     int col;
-    for (col=0; col<BOARDSIZE; col++)
+    for (col=0; col<8; col++)
     {
         if(colfree[col] && upfree[queencount + col] && downfree[queencount - col + DOWNOFFSET])
         {
@@ -42,7 +42,7 @@ void AddQueen(void)
             upfree[queencount + col] = false;
             downfree[queencount - col + DOWNOFFSET] = false;
 
-            if(queencount == BOARDSIZE-1)
+            if(queencount == 4-1)
                 WriteBoard();
             else
                 AddQueen();

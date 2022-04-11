@@ -56,4 +56,5 @@ int main()
         printf("Element is %d\n", head->data);
         head= head -> next;
     }while(head-> next != NULL);
+    printf("Element is %d\n", head->data);
 }
