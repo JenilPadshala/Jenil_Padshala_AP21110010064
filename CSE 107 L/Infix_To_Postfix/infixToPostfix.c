@@ -21,7 +21,7 @@ int main()
     while(infix[i] != '\0')
     {
         sym = infix[i];
-        if(isupper(sym))//Adds uppercase alphabet to postfix
+        if(isalpha(sym))//Adds uppercase alphabet to postfix
         {
             postfix[j++] = sym;
         }
