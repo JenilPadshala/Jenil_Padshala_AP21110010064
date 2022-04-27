@@ -1,6 +1,6 @@
 /*
     Author: Jenil Padshala | AP21110010064
-        Project Title: Simulation of Flights
+    Project Title: Simulation of Flights
 */
 #include "FlightQueue.h"    //Header file containing all the operational functions for take-off and landing queues
 
