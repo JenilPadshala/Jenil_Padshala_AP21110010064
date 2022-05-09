@@ -1,6 +1,6 @@
 /*
 	Author: Jenil Padshala| AP21110010064
-	Porject Title: The 4 Queens Problem
+	Project Title: The 4 Queens Problem
 */
 /*
 	Pre: The user enters number of queens

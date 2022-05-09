@@ -8,10 +8,10 @@ int Tbottom = 0; //Indicates occupied bottom space of Takeoffwait queue
 
 int Ltop = 0;    //Indicates empty top space of Landingwait queue
 int Lbottom = 0; //Indicates occupied bottom space of Landingwait queue
+
 void Tpush(char ele); //Function that adds element at the top of queue
 char Tpop();  //Function that deletes element at the bottom of the queue
 int Tempty();   //Function to check if the queue array is empty
-//void Tprint();  //Function to print queue array
 
 void Lpush(char ele); //Function that adds element at the top of queue
 char Lpop();  //Function that deletes element at the bottom of the queue
@@ -42,18 +42,7 @@ int Tempty()
     {
         return 0;
     }
-    /*else
-        printf("\nThe Take-off waitlist is not empty.\n");*/
 }
-
-/*void Tprint()
-{
-    for (int i = Tbottom; i<Ttop;i++)
-    {
-        printf("%d\n", queue[i]);
-    }
-    printf("\n");
-}   //end of printQueue()*/
 
 void Lpush(char ele)
 {
