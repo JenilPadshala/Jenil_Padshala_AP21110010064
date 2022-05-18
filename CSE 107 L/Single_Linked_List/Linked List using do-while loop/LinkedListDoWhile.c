@@ -12,7 +12,7 @@ int main()
                         *p,     // pointer for indicating every new list created
                         *q;     // pointer to traverse the linked list
     /*For loop to create linked list*/
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 5; i++)
     {
         p = (struct list *)malloc(sizeof(struct list)); // Assigning a new list
         printf("Enter element %d:", i+1);

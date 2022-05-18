@@ -14,7 +14,7 @@ int main() //Driver Function
     scanMatrix();
     int t = checkMatrix();
     printMatrix();
-    if (t = 1)
+    if (t == 1)
         sparseRepresentation();
 }
 

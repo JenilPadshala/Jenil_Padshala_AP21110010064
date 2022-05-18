@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct list
+struct list //Create a node for the linked Elist
 {
     int row,
         col,

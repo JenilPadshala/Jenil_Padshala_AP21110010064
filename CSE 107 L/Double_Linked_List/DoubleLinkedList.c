@@ -12,7 +12,7 @@ int main()
 {
     struct dbl_list *head = NULL,   //Pointer for starting location of linked list
                     *p;             //Pointer for new node created
-    for(int i=0; i<3; i++)      /*Input data elements from users and store in linked list*/
+    for(int i=0; i<5; i++)      /*Input data elements from users and store in linked list*/
     {
         p = (struct dbl_list*)malloc(sizeof(struct dbl_list));  //Creating new node
         printf("Enter element %d:", i+1);
@@ -33,29 +33,21 @@ int main()
             head->next=p;
             p->prev=head;
         }
-    }
-    /*while (head->prev != NULL)
-    {
-        head = head->prev;
-    }
-    while (head != NULL)            //DO NOT USE WHILE LOOP... head SHOULD NOT POINT TO NULL AT THE END.
-    {
-        printf("Element is %d\n", head->data);
-        head = head->next;
-    }*/
+    }//end of for loop
     
     /*traversing back to 1st element*/
     
     while (head->prev != NULL)
     {
         head = head -> prev;
-    }
+    }//end of while loop
 
     /*Printing data stored in doubly linked list*/
+    printf("Elements are:\n");
     do
     {
-        printf("Element is %d\n", head->data);
+        printf("%d\t", head->data);
         head= head -> next;
-    }while(head-> next != NULL);
-    printf("Element is %d\n", head->data);
+    }while(head-> next != NULL);//end of do...while loop
+    printf("%d\n", head->data);
 }
