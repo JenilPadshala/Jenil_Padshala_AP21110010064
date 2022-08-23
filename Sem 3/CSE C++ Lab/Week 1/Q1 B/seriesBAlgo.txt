@@ -1,0 +1,12 @@
+Time Copmlexity: O(n)
+
+Step 1: START
+Step 2: Declare integer variable sum with value 1.
+Step 3: Declare integer variable num with value 1.
+Step 4: Input integer variable x.
+Step 5: Input integer variable n.
+Step 6: For integer i set as 1, is less than or equal to n:
+        Step a: Add num*x to num.
+        Step b: Add num to sum;
+Step 7: Display sum.
+Step 8: STOP

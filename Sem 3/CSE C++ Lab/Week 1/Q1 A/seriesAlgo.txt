@@ -1,0 +1,10 @@
+Time Complexity: O(n^2)
+
+Step 1: START
+Step 2: Declare integer variable sum with value 1.
+Step 3: Input integer variable x.
+Step 4: Input integer variable n.
+Step 5: For integer i set as 1, is less than or equal to n:
+        Step a: Add x raised to i to the sum value.
+Step 6: Display sum.
+Step 7: STOP
