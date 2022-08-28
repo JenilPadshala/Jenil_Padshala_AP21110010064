@@ -18,3 +18,5 @@ int main()
     cin >> n;
     cout << "Factorial of "<< n << " is "<< Factorial(n);
 }
+
+
