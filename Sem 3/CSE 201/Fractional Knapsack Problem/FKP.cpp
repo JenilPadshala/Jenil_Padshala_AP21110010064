@@ -8,13 +8,16 @@ int main()
     cout << "Enter the number of items available:";
     cin >> nItems;
 
-    int Prices[nItems], Weight[nItems], PtoW[nItems];
+    int Prices[nItems]; 
+    float Weight[nItems]; 
+    float PtoW[nItems];
     cout <<"Enter price and weight of each item separated by a space:"<<endl;
 
     for (int i=0; i<nItems; i++)
     {
         cin >> Prices[i] >>Weight[i];
         PtoW[i] = Prices[i]/Weight[i];
+        cout << PtoW[i];
     }
 
     //BUBBLE SORT: Arragne Items in all arrays based on their P/W in descending order
@@ -25,15 +28,15 @@ int main()
         {
             if (PtoW[j] < PtoW[j+1])
             {
-                int temp = PtoW[j];
+                float temp = PtoW[j];
                 PtoW[j] = PtoW[j+1];
                 PtoW[j+1] = temp;
 
-                temp = Prices[j];
+                int temp = Prices[j];
                 Prices[j] = Prices[j+1];
                 Prices[j+1] = temp;
 
-                temp = Weight[j];
+                float temp = Weight[j];
                 Weight[j] = Weight[j+1];
                 Weight[j+1] = temp;
 
