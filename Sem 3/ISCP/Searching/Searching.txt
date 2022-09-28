@@ -1,0 +1,27 @@
+Searching:  is the process of identifying whether the element(key) os available or not in the given input values
+
+Linear Search:
+    - Linear search is also known as sequential search
+    - Time complexity is O(n).
+    - It compares each element with key from the zero location of the list
+    -Eg.
+        Target|15|          Unsorted list |13|48|7|4|15|25|11|
+            Comparison 1: 15!=13
+            Comparison 2: 15!=48
+            Comparison 2: 15!=7
+            Comparison 2: 15!=4
+            Comparison 2: 15=15
+    (Go through each index until element found, then stop.)
+
+
+Binary Search:
+    -It is faster than linear search
+    -Input elements must be in sorted order
+    -Time complexity is O(logN), where N is number of elements
+    -Algorithm:
+        *Initialize first element index as low, last element index as high
+        *find middle element index mid=(low+high)/2
+        *Now compare key with mid
+        *If key==mid index value then display element found
+        *If key>arr[mid] then low=mid+1
+            else if key<arr[mid] then high = mid-1
