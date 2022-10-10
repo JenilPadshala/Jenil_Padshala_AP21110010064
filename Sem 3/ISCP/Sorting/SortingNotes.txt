@@ -1,0 +1,43 @@
+SELECTION SORT:
+    - It selects the minimum value in the array
+    - Selection sort takes less number of comparisons than bubble sort
+
+   ## Steps:
+        1. First find smallest value from all given values
+        2. Then compare it with first value, swap if it is less than first element
+        3. Now smallest value is placed at first position.
+        4. From the remaining elements find smallest element again and compare with second element
+        5. Continue the same process for remaining all elements
+
+INSERTION SORT:
+    - Works similar to the sorting of playing cards in hands.
+    - It is not appropriate for large data sets as the time complexity of insertion sort in 
+        the average case and worst case is O(n^2), where n is the number of items.
+    - Insertion sort is less efficient that the other sorting algorithms like heap sort, quick 
+        sort, merge sort, etc.
+    - On average (k + ) / 2 comparisons are required to place the kth element into its correct 
+        position. Therefore, average number of comparisons required for 7th element = (7+1)/2=4
+    
+
+MERGE SORT:
+    - It is a divide and conquer algorithm.
+    - Divides given input array into 2 parts until pair is formed, then perform sort and finally combine each pair of sorted values
+    - Time complexity is O(nlogn)
+    - Space complexity is O(n)
+
+
+QUICK SORT:
+	- It is divide and conquer algorithm.
+	- The algorithm was developed by a British computer scientist Tony Hoare in 1959.
+	- Fastest sort algorithm.
+	- Quick sort is also called as "PartitionExchange" sort
+	- Time complexity is O(nlogn)
+
+		ALGORITHM:
+			1. Select first or any element of given array as pivot
+            2. Initialize i with 0 index and j with last index
+            3. Increment i if arr[i] <= pivot, otherwise stop
+            4. Decrement j if arr[j]>pivot, otherwise stop
+            5. Now if i<j then swap arr[i] and arr[j]
+            6. Repeat steps 3,4 and 5 upto i and j cross each other(i>j).
+            7. Finally, swap pivot element with the element pointed by j which is corect place for pivot.
