@@ -15,8 +15,8 @@ int main()
     for (i=0; i<10; i++)
         AOP[i] = NULL;
     
-    cout << "Enter 30 numbers" << endl;
-    for (i=0; i<30;i++)
+    cout << "Enter 10 numbers" << endl;
+    for (i=0; i<10;i++)
     {
         cin >> num;
         k=num %10;

@@ -21,7 +21,7 @@ int main()
     // Creating all subsets
     for (j = 0; j < Nn; j++)
     {
-        k = j, i = 3;
+        k = j, i = N-1;
         while (k > 0)
         {
             A[j][i--] = k % 2;

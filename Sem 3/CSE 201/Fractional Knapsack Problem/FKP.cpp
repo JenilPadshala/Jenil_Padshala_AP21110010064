@@ -20,7 +20,7 @@ int main()
         cout << PtoW[i];
     }
 
-    //BUBBLE SORT: Arragne Items in all arrays based on their P/W in descending order
+    //BUBBLE SORT: Arrange Items in all arrays based on their P/W in descending order
     int flag=0;
     for (int i=0; i<nItems-1; i++)
     {

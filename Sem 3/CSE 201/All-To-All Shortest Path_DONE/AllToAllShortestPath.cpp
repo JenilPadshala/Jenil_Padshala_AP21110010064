@@ -56,7 +56,7 @@ int main()
         }
     }
 
-    // Showing Output COst Matrix:
+    // Showing Output Cost Matrix:
     cout << "All to All Shortest Path solution Matrix:" << endl;
     for (i = 0; i < n; i++)
     {
