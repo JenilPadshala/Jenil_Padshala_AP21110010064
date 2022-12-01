@@ -1,0 +1,24 @@
+while row > 0:
+{
+    Move to next column
+    while Queen is not placeable and column < 9:
+    {
+        Move to next column
+    }
+    if column < 9:
+    {
+        if row is 8:
+        {
+            print the solution
+        }
+        else
+        {
+            move to next row
+            Start from the very first column of the row
+        }
+    }
+    else
+    {
+        Move to the pervious row
+    }
+}

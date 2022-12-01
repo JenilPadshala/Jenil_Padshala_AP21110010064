@@ -1,0 +1,35 @@
+Common errors in templates:
+-----------------------------
+1. Not using template<class T> when defining member function for class templates.
+2. Not using the generic type for parameters/variables.
+3. Not placing class, before every formal type parameter.
+    correct: template<class T, class S>
+4. If a template is invoked with a user defined class type and that template uses operators (==, +, <=) with objects of that class type, then those operators must be overloaded.
+
+
+STL (STANDARD TEMPLATE LIBRARY)
+-------------------------------
+ - generic collection of class templates and algorithms that allow programmers to easily implement standarad data structures like queues, lists, and stacks.
+ - 3 categories:
+        1. Sequences: Vectors, Lists, etc.
+        2. Container Adapters: stacks, queues, priority queues, etc.
+        3. Associative containers: BitSets, Maps, Multimaps, Sets, Multisets, etc.
+
+ - eg. creating stack... 
+            stack <int> myStack;
+
+Why use STL:
+    1. Reuse: "write less, do more"
+            - hides complex, tedious and error prone details
+            - programmers can focus on the problem at hand
+            - type-safe plug compatibility between STL components 
+    2. Flexibility
+            - Iterators decouple algorithms from containers
+            - Unanticipated combinations easily supported
+
+
+STL CONTAINERS:
+ - STL containers are Abstract Data Types, they are parameterized by the type(s) the contain.
+ - Each container provides factory methods for creating iterators:
+        * begin()/end() for traversing from front to back
+        * rbegin()/rend() for traversing from back to front

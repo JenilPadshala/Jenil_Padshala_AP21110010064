@@ -41,7 +41,7 @@ int main()
         cout << endl;
     }
 
-    // Improving distances from a selected to node to all unselected nodes:
+    // Improving distances from a selected node to all unselected nodes:
     for (k = 0; k < n; k++) // From All
     {
         for (i = 0; i < n; i++) // To All
