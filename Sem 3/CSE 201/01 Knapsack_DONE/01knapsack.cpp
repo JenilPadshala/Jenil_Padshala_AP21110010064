@@ -21,7 +21,7 @@ int main()
     // Creating all subsets
     for (j = 0; j < Nn; j++)
     {
-        k = j, i = N-1;
+        k = j, i = N - 1;
         while (k > 0)
         {
             A[j][i--] = k % 2;
@@ -57,17 +57,17 @@ int main()
             MW[i] += A[i][t - j] * W[j];
             MP[i] += A[i][t - j] * P[j];
         }
-        if (MW[i]> KW)
+        if (MW[i] > KW)
             MP[i] = 0;
     }
 
-    float MAX=0;
-    for (i=0; i<Nn; i++)
+    float MAX = 0;
+    for (i = 0; i < Nn; i++)
     {
-        if (MP[i]>MAX)
+        if (MP[i] > MAX)
         {
             MAX = MP[i];
         }
     }
-    cout << "The highest profit is $"<<MAX<<endl;
+    cout << "The highest profit is $" << MAX << endl;
 }

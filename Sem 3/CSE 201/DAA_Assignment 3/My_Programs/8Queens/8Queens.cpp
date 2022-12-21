@@ -42,7 +42,6 @@ main()
                 cout << endl;
                 cout << "For the next solution press any key\n ";
                 cin.get();
-
             }
             else
             {

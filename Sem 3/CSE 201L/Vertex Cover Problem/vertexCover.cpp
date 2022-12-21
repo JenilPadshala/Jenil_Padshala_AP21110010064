@@ -36,7 +36,7 @@ int main()
     }
 
     flag = 1;
-    cout <<"Vertex Cover:\n";
+    cout << "Vertex Cover:\n";
     while (flag)
     {
         for (i = 0; i < n; i++)
@@ -46,7 +46,7 @@ int main()
                 if (M[i][j] == 1)
                 {
                     flag = 1;
-                    cout<<i<<"\t";
+                    cout << i << "\t";
                     count++;
                     goto skip;
                 }

@@ -1,21 +1,26 @@
 #include <cstdlib>
 #include <iostream>
 #include <stdio.h>
-#include <string>
-using namespace std;
+#include <stdlib.h>
 
+using namespace std;
 
 int main()
 {
-    string t, p;
-    int i, j, k, n, flag, s, ptrnlen, txtlen;
-    cout << "Input pattern: " << endl;
-    getline(cin,p);
-    cout << "Input text: " << endl;
-    getline(cin, t);
+    char t[20], p[4];
+    int i, j, k, n, flag, s;
+    cout << "Enter 4 charaters for pattern & 20 characters for text\n";
+    cout << "Input 4 characters pattern: " << endl;
+    for (i = 0; i < 4; i++)
+    {
+        scanf("%c", &p[i]);
+    };
+    cout << "Input 20 characters text: " << endl;
+    for (i = 0; i < 20; i++)
+    {
+        scanf("%c", &t[i]);
+    };
 
-    ptrnlen = p.length();
-    txtlen = t.length();
     i = -1;
     k = -1;
 
@@ -26,7 +31,7 @@ int main()
         {
             i = i + 1;
             j = j + 1;
-        } while (t[j] == p[i] && i < ptrnlen);
+        } while (t[j] == p[i] && i < 4);
 
         if (i < 4)
         {
@@ -45,7 +50,7 @@ int main()
             if (flag == 0)
             {
                 i = -1;
-                k = k + ptrnlen;
+                k = k + 4;
                 cout << "k= " << k << endl;
             }
             else
@@ -62,8 +67,10 @@ int main()
             break;
         }
 
-    } while (k < txtlen);
+    } while (k < 20);
 
-    if (i < ptrnlen)
-        cout << "Match not found"<<endl;
+    if (i < 4)
+        cout << "Match not found\n";
+
+    cout << endl;
 }

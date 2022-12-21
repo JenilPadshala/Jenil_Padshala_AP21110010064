@@ -36,7 +36,7 @@ int main()
 
     srand((unsigned)time(NULL));
     int time, n, id = 0, stA = 0, stB = 0, st1, st2;
-    float twt = 0,awt, ttt = 0, att;
+    float twt = 0, awt, ttt = 0, att;
     struct caller
     {
         int idNo;      // Caller id no.
@@ -59,12 +59,14 @@ int main()
     for (time = 0; time < 200; time++)
     {
         n = rand() % 100;
-        cout << endl<<endl<<"Time " << time<<endl;
+        cout << endl
+             << endl
+             << "Time " << time << endl;
 
         /*Customer arrives probability = 50%*/
         if (n < 50)
         {
-            cout << "Customer " << id + 1 << " arrived"<<endl;
+            cout << "Customer " << id + 1 << " arrived" << endl;
 
             temp = new (caller);
             temp->idNo = ++id;
@@ -158,8 +160,7 @@ int main()
             }
         }
         if (stA == 1)
-            cout << "ABLE is busy"<<endl;
-        
+            cout << "ABLE is busy" << endl;
 
         if (stB == 1)
         {
@@ -184,18 +185,19 @@ int main()
             }
         }
         if (stB == 1)
-            cout << "BAKER is busy"<<endl;
+            cout << "BAKER is busy" << endl;
         /*adding wait time to all customers in waiting*/
         temp = waiting;
-        while (temp!=NULL)
+        while (temp != NULL)
         {
-            temp->wt+=1;
+            temp->wt += 1;
             temp = temp->next;
         }
         getch();
     }
 
-    cout <<"END OF THE SIMULATION"<<endl<<endl;
+    cout << "END OF THE SIMULATION" << endl
+         << endl;
     /*Caluculating avg waiting time and avg turnaround time*/
     temp = attended;
     while (temp != NULL)
@@ -205,9 +207,9 @@ int main()
         temp = temp->next;
     }
 
-    awt = twt/float(id);
-    att = ttt/float(id);
-    cout <<"Average Waiting Time: "<<awt<<endl;
-    cout <<"Average Turn-around Time: "<<att<<endl;
-    cout <<"***************************************";
+    awt = twt / float(id);
+    att = ttt / float(id);
+    cout << "Average Waiting Time: " << awt << endl;
+    cout << "Average Turn-around Time: " << att << endl;
+    cout << "***************************************";
 }

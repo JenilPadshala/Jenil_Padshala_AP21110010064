@@ -20,24 +20,24 @@ int main()
         {
             i++;
             j++;
-        } while (txt[j]==ptrn[i] && i<ptrn.length());
+        } while (txt[j] == ptrn[i] && i < ptrn.length());
 
-        if (i<ptrn.length())
+        if (i < ptrn.length())
         {
-            i=-1;
-            k +=1;
+            i = -1;
+            k += 1;
         }
         else
         {
-            cout << "Match found at index "<<k+1<<" in the text."<<endl;
-            cout <<txt<<endl;
+            cout << "Match found at index " << k + 1 << " in the text." << endl;
+            cout << txt << endl;
             break;
         }
-        
-    } while (k<txt.length());
 
-    if (i<ptrn.length())
+    } while (k < txt.length());
+
+    if (i < ptrn.length())
     {
-        cout <<"Match not found"<<endl;
+        cout << "Match not found" << endl;
     }
 }

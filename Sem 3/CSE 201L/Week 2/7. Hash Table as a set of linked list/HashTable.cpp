@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     int i, k, num;
-    
+
     struct node
     {
         int n;
@@ -12,18 +12,18 @@ int main()
     };
     struct node *temp, *p1, *AOP[10];
 
-    for (i=0; i<10; i++)
+    for (i = 0; i < 10; i++)
         AOP[i] = NULL;
-    
-    cout << "Enter 10 numbers" << endl;
-    for (i=0; i<10;i++)
+
+    cout << "Enter 20 numbers" << endl;
+    for (i = 0; i < 20; i++)
     {
         cin >> num;
-        k=num %10;
-        p1=new(node);
+        k = num % 10;
+        p1 = new (node);
         p1->n = num;
         p1->next = NULL;
-        if(AOP[k] == NULL)
+        if (AOP[k] == NULL)
             AOP[k] = p1;
         else
         {
@@ -32,15 +32,16 @@ int main()
         }
     }
 
-    for (i=0; i<10;i++)
+    for (i = 0; i < 10; i++)
     {
         temp = AOP[i];
-        cout <<"List number "<<i<<":";
-        while (temp!=NULL)
+        cout << "List number " << i << ":";
+        while (temp != NULL)
         {
-            cout << " "<<temp->n;
-            temp=temp->next;
+            cout << " " << temp->n;
+            temp = temp->next;
         }
-        cout <<endl<<endl; 
+        cout << endl
+             << endl;
     }
 }

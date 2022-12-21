@@ -54,7 +54,7 @@ int main()
         lo = lastOccurence(ptrn,txt[i],j);
         if (lo == -1)
         {
-            i +=    
+            i +=
         }
 
     } while (i < txtlen);

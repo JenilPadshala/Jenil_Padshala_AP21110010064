@@ -5,8 +5,6 @@
 
 using namespace std;
 
-// Brute force matching
-
 int main()
 {
     char t[25], p[6];
@@ -86,6 +84,4 @@ int main()
     }
 
     cout << endl;
-    system("PAUSE");
-    return EXIT_SUCCESS;
 }

@@ -94,7 +94,7 @@ int main()
         // Select a temporary card
         temp.setData(deck[rc1].getType(), deck[rc1].getValue());
         // Swap the cards
-        deck[rc1].setData(deck[rc2].getType(), deck[rc2].getValue()); //deck[rc1] = deck[rc2]
+        deck[rc1].setData(deck[rc2].getType(), deck[rc2].getValue()); // deck[rc1] = deck[rc2]
         deck[rc2] = temp;
     }
 

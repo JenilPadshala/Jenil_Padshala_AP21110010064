@@ -1,9 +1,9 @@
 #include <iostream>
 #include <stdio.h>
-#include <math.h>                  
+#include <math.h>
 using namespace std;
 int place(int);
-int M[9][9], X[9], i, j, k, flag;
+int  X[9], i, j, k, flag;
 main()
 {
     k = 1;
